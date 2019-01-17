@@ -1,24 +1,41 @@
-# README
+## books table
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false|
+|auther|string|null: false|
+|publish|string|null: false|
+|price|intger|null: false|
+|genre|string|null: false|
+|summary|text|
+|point|string|
+|image|string|null: false|
+|user_id|integer|null: false|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Association
+- belongs_to :user
+- has_many :comments
 
-Things you may want to cover:
 
-* Ruby version
+## users table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|mail_address|string|null: false|
+|image|string|
+|profile|string|
 
-* System dependencies
+### Association
+- has_many :books
+- has_many :comments
 
-* Configuration
 
-* Database creation
+## Comments table
+|Column|type|Options|
+|------|----|-------|
+|body|string|null: false|
+|book_id|integer|null: false|
+|user_id|integer|null: false|
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belong_to :user
+- belong_tp :book
