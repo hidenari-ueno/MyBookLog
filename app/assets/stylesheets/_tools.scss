@@ -1,0 +1,11 @@
+.clearfix::after {
+content: "";
+display: block;
+clear: both;
+}
+
+$blue: #00bfff;
+$head: #ffebcd;
+$back-color: #faebd7;
+$border: #c0c0c0;
+$gray: #a9a9a9;
