@@ -1,0 +1,39 @@
+.header{
+  background-color: $blue;
+  height: 100px;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  .user_name{
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+    color: $head;
+  }
+  .container{
+    float: right;
+    &__user{
+      background-color: $head;
+      height: 45px;
+      width: 45px;
+      border-radius: 25px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    &__home{
+      margin-left: 10px;
+      display: inline-block;
+      .fa-home{
+        font-size: 50px;
+        color: $head;
+      }
+    }
+    &__dropdown{
+      margin-left: 20px;
+      display: inline-block;
+      .fa-align-justify{
+        font-size: 50px;
+        color: $head;
+      }
+    }
+  }
+}

@@ -2,8 +2,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |title|string|null: false|
-|auther|string|null: false|
-|publish|string|null: false|
+|author|string|null: false|
+|publisher|string|null: false|
 |price|intger|null: false|
 |genre|string|null: false|
 |summary|text|
