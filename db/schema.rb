@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20190117091235) do
     t.integer "price", null: false
     t.string "genre", null: false
     t.text "summary"
-    t.string "point"
     t.string "image", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false

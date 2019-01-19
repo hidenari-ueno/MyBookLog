@@ -7,7 +7,6 @@ class CreateBooks < ActiveRecord::Migration[5.1]
       t.integer :price, null: false
       t.string :genre, null: false
       t.text :summary
-      t.string :point
       t.string :image, null: false
       t.integer :user_id, null: false
       t.timestamps

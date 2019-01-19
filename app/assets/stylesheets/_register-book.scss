@@ -1,0 +1,17 @@
+.register-book{
+  padding: 0 100px;
+  &__title{
+    font-size: 50px;
+    height: 70px;
+    border-bottom: solid 1px $border;
+  }
+  h3{
+    font-size: 20px;
+  }
+  .registration-forms{
+    padding-top: 20px;
+    .form + .form{
+      margin-top: 10px;
+    }
+  }
+}
