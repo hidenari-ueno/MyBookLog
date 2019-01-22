@@ -103,5 +103,10 @@
 
 <div class="hidden-contents" >
   <ul class="link-to">
-    <%= link_to "本を登録", books_new_path(params[:id]) %>
+    <li><%= link_to "本を登録", books_new_path(params[:id]) %></li>
+    <% if user_signed_in? %>
+    <li><%= link_to "sign out", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+    <li><%= link_to "sign in", new_user_session_path %></li>
+    <% end %>
 </div>
