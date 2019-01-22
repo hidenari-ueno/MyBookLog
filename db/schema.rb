@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20190119083327) do
     t.string "author", null: false
     t.string "publisher", null: false
     t.integer "price", null: false
-    t.string "genre", null: false
+    t.integer "genre", null: false
     t.text "summary"
     t.string "image", null: false
     t.integer "user_id", null: false
