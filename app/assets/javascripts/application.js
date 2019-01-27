@@ -13,4 +13,6 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-= require dropzone
+// = require dropzone
+= require jquery
+= require jquery-rails

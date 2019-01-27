@@ -1,31 +1,41 @@
 <div class="register-book">
   <h2 class="register-book__title">Register BOOK</h2>
   <div class="registration-forms">
-    <div class="registration-forms__title form">
-      <h3>TITLE</h3>
-      <input>
-    </div>
     <div class="registration-forms__image form">
       <h3>IMAGE</h3>
-      <input>
-    </div>
-    <div class="registration-forms__author form">
-      <h3>AUTHOR</h3>
-      <input>
-    </div>
-    <div class="ragistration-forms__price form">
-      <h3>PRICE</h3>
-      <input>
-    </div>
-    <div class="registration-forms__genre form">
-      <h3>JENRE</h3>]
-      <
-      <input>
-    </div>
-    <div class="registration-forms__summary form">
-      <h3>SUMMSRY</h3>
-      <input>
-    </div>
-    <input class="form" type="submit">
+      <%= form_for @book do |f| %>
+        <div class="fallback dz-message needsclick">
+          <%= f.file_field :image, html: {class:'dropzone', id: "item-dropzone"}%>
+        </div>
+        <div class="registration-forms__title form">
+          <h3>TITLE</h3>
+          <%= f.text_field :title, placeholder: "本のタイトル" %>
+        </div>
+        <div class="registration-forms__author form">
+          <h3>AUTHOR</h3>
+          <%= f.text_field :author, placeholder: "著者" %>
+        </div>
+        <div class="registration-forms__publisher form">
+          <h3>PUBLISHER</h3>
+          <%= f.text_field :publisher, placeholder: "出版社" %>
+        </div>
+        <div class="ragistration-forms__price form">
+          <h3>PRICE</h3>
+          <%= f.text_field :price, placeholder: "値段" %>
+        </div>
+        <div class="registration-forms__genre form">
+          <h3>JENRE</h3>
+          <%= f.select :genre, Book.genres.keys %>
+        </div>
+        <div class="registration-forms__kleyword form">
+          <h3>KEYWORD</h3>
+          <%= f.text_field :keyword, placeholder: "キーワード" %>
+        </div>
+        <div class="registration-forms__summary form">
+          <h3>SUMMSRY</h3>
+          <%= f.text_area :summary, placeholder: "要約" %>
+        </div>
+        <%= f.submit "登録する" %>
+      <% end %>
   </div>
 </div>
